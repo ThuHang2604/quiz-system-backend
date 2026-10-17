@@ -4,7 +4,7 @@ RESTful API for managing quizzes and multiple-choice questions, built with **Nod
 
 🔗 **Live API:** <https://quiz-system-backend-seven.vercel.app>
 
-📖 **API docs (Swagger UI):** <https://quiz-system-backend-seven.vercel.app/api-docs>
+📖 **API docs (Swagger UI):** <https://quiz-system-backend-seven.vercel.app/api-docs/>
 
 ## Features
 
