@@ -12,6 +12,9 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
+// API docs (Swagger UI) - mounted before the DB middleware, it does not need the database
+app.use("/api-docs", require("./docs/swagger.routes"));
+
 // KẾT NỐI DB TRƯỚC KHI XỬ LÝ REQUEST
 // Middleware này đảm bảo DB luôn kết nối khi có request tới
 app.use(async (req, res, next) => {
@@ -20,7 +23,7 @@ app.use(async (req, res, next) => {
 });
 
 app.get("/", (req, res) => {
-    res.send("✅ Hello! Quiz App API is running...");
+    res.send("✅ Hello! Quiz App API is running. Docs: /api-docs");
 });
 
 // Routes
