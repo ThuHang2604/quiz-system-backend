@@ -22,8 +22,12 @@ app.use(async (req, res, next) => {
     next();
 });
 
-app.get("/", (req, res) => {
-    res.send("✅ Hello! Quiz App API is running. Docs: /api-docs");
+// Trang chủ chuyển thẳng tới Swagger
+app.get("/", (req, res) => res.redirect("/api-docs/"));
+
+// Giữ lại endpoint kiểm tra server còn sống
+app.get("/health", (req, res) => {
+    res.send("✅ Quiz App API is running. Docs: /api-doc/");
 });
 
 // Routes
